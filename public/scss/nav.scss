@@ -1,0 +1,42 @@
+@mixin font-style {
+    font: {
+        size: 1em;
+        weight: bold;
+    }
+}
+
+/* SCSS */
+
+nav {
+    @include font-style;
+    float: left;
+    ul {
+        list-style-type: none;
+        li {
+            float: left;
+            margin: 0 5px 0 0;
+            color: $color4;
+            a {
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+               }
+               color: $color4;
+           }
+       }
+   }
+}
+.register-button {
+    @include font-style;
+    float: right;
+    margin: 0px 5px 0 0;
+    color: $color4;
+    a {
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+            color: $color2;
+       }
+       color: $color4;
+    }
+}

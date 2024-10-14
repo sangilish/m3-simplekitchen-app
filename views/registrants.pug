@@ -1,0 +1,21 @@
+octype html
+html
+  head
+    title= `${title}`
+    link(rel='stylesheet', href='/css/bootstrap.min.css')
+    link(rel='preconnect' href='https://fonts.gstatic.com')
+    link(href='https://fonts.googleapis.com/css2?family=Sacramento&display=swap' rel='stylesheet')
+    link(rel='StyleSheet' href='css/styles.css' type='text/css')
+    script(src='script.js')
+
+    if registrations.length
+        table.listing-table.table-light.table-striped
+            tr
+                th Name
+                th Email
+            each registration in registrations
+                tr
+                    td= registration.name
+                    td= registration.email
+    else
+        p No registrations yet :(
